@@ -1,0 +1,45 @@
+{
+  "name": "dcf-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "prettier:fix": "npx prettier --check .",
+    "prettier:check": "npx prettier --check .",
+    "clean": "rm -rf node_modules && npm i",
+    "lint": "eslint .",
+    "test:only": "mocha --bail --recursive test",
+    "test": "npm run prettier:check && npm run lint && npm run test:only"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bertolo1988/dcf-chrome-extension.git"
+  },
+  "keywords": [
+    "cashflow",
+    "present",
+    "valuation",
+    "investing",
+    "dcf",
+    "intrinsic",
+    "value"
+  ],
+  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/bertolo1988/dcf-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/bertolo1988/dcf-chrome-extension#readme",
+  "dependencies": {
+    "discounted-cash-flow": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.25.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-sort-exports": "^0.3.2",
+    "prettier": "2.1.2"
+  }
+}
