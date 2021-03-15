@@ -1,14 +1,16 @@
 {
   "extends": ["eslint:recommended", "prettier"],
   "env": {
-    "mocha": true,
-    "node": true,
+    "browser": true,
     "es6": true
   },
-  "plugins": ["prettier", "sort-exports"],
+  "plugins": ["prettier", "sort-exports", "import"],
+  "globals": {
+    "chrome": "readonly",
+    "page": "readonly"
+  },
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "script"
+    "sourceType": "module"
   },
   "rules": {
     "comma-dangle": ["error", "never"],
