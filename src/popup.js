@@ -1,4 +1,17 @@
+import _ from 'lodash';
 import DiscountedCashFlow from 'discounted-cash-flow';
+
+let calculateButtonElement = document.getElementById('calculateButton');
+let openNewWindowElement = document.getElementById('openNewWindow');
+
+openNewWindowElement.onclick = function () {
+  chrome.windows.create({
+    url: 'popup.html',
+    type: 'panel',
+    width: 200,
+    height: 600
+  });
+};
 
 function safeParseNumberElement(element) {
   try {
@@ -8,8 +21,7 @@ function safeParseNumberElement(element) {
   }
 }
 
-let calculateButtonElement = document.getElementById('calculateButton');
-calculateButtonElement.onclick = function (element) {
+function getDataFromHtml() {
   let freeCashFlow = safeParseNumberElement(
     document.getElementById('freeCashFlow')
   );
@@ -22,34 +34,59 @@ calculateButtonElement.onclick = function (element) {
   let discountRate = safeParseNumberElement(
     document.getElementById('discountRate')
   );
+  let cash = safeParseNumberElement(document.getElementById('cash'));
+  let debt = safeParseNumberElement(document.getElementById('debt'));
+  let marketCap = safeParseNumberElement(document.getElementById('marketCap'));
+  let stockPrice = safeParseNumberElement(
+    document.getElementById('stockPrice')
+  );
+  return {
+    freeCashFlow,
+    growthRate,
+    terminalPe,
+    discountRate,
+    cash,
+    debt,
+    marketCap,
+    stockPrice
+  };
+}
+
+function renderFairEnterpriseValue(fairEnterpriseValue) {
+  document.getElementById('fairEnterpriseValue').value = fairEnterpriseValue;
+}
+
+function renderFairStockPrice(fairStockPrice) {
+  document.getElementById('fairStockPrice').value = fairStockPrice;
+}
+
+function renderFairMarketCap(fairMarketCap) {
+  document.getElementById('fairMarketCap').value = fairMarketCap;
+}
+
+calculateButtonElement.onclick = function () {
+  const {
+    freeCashFlow,
+    growthRate,
+    terminalPe,
+    discountRate,
+    cash,
+    debt,
+    marketCap,
+    stockPrice
+  } = getDataFromHtml();
+
   const result = DiscountedCashFlow.calculate(
     freeCashFlow,
     [growthRate],
     terminalPe,
     discountRate
   );
-  document.getElementById('result').value = result.totalPresentValue;
-};
+  renderFairEnterpriseValue(result.totalPresentValue);
 
-/* const DISCOUNT_RATE = 0.1;
-const DECIMALS = 2;
-const currentSharePrice = 346.39;
-const currentMarketCap = 101.107;
-const cash = 4.2;
-const debt = 0;
-const freeCashFlow = 1.385;
-const growth = [0.05];
-const terminalPE = 20;
-const { totalPresentValue } = DiscountedCashFlow.calculate(
-  freeCashFlow,
-  growth,
-  terminalPE,
-  DISCOUNT_RATE,
-  DECIMALS
-);
-const fairMarketCap = totalPresentValue - debt + cash;
-const fairSharePrice = _.round(
-  (fairMarketCap * currentSharePrice) / currentMarketCap,
-  2
-);
-console.log(`fair share price: ${fairSharePrice}`); */
+  const fairMarketCap = result.totalPresentValue - debt + cash;
+  renderFairMarketCap(fairMarketCap);
+
+  const fairStockPrice = _.round((fairMarketCap * stockPrice) / marketCap, 2);
+  renderFairStockPrice(fairStockPrice);
+};

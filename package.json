@@ -7,7 +7,7 @@
   "scripts": {
     "refresh": "npm run clean && npm i && npm run build",
     "build": "rm -rf dist && npx webpack",
-    "postbuild": "copyfiles src/*.json src/*.html -f dist/ && copyfiles -u 1 src/images/*.png src/images/*.jpg dist",
+    "postbuild": "copyfiles src/*.json src/*.html src/*.css -f dist/ && copyfiles -u 1 src/images/*.png src/images/*.jpg dist",
     "prettier:fix": "npx prettier --check .",
     "prettier:check": "npx prettier --check .",
     "clean": "rm -rf node_modules && rm -rf dist",
