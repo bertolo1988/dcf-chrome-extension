@@ -17333,14 +17333,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./package.json":
-/*!**********************!*\
-  !*** ./package.json ***!
-  \**********************/
+/***/ "./src/manifest.json":
+/*!***************************!*\
+  !*** ./src/manifest.json ***!
+  \***************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"dcf-chrome-extension","version":"1.0.0-beta.1","description":"Chrome extension that helps to calculate the fair valuation of an investment using discounted cash flow method","main":"src/popup.js","engine":{"node":">14"},"scripts":{"refresh":"npm run clean && npm i && npm run build","build":"rm -rf dist && npx webpack","postbuild":"copyfiles src/*.json src/*.html src/*.css -f dist/ && copyfiles -u 1 src/images/*.png src/images/*.jpg dist","prettier:fix":"npx prettier --check .","prettier:check":"npx prettier --check .","clean":"rm -rf node_modules && rm -rf dist","lint":"eslint ."},"repository":{"type":"git","url":"git+https://github.com/bertolo1988/dcf-chrome-extension.git"},"keywords":["cashflow","present","valuation","investing","dcf","intrinsic","value"],"author":"bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)","license":"none","bugs":{"url":"https://github.com/bertolo1988/dcf-chrome-extension/issues"},"homepage":"https://github.com/bertolo1988/dcf-chrome-extension#readme","dependencies":{"discounted-cash-flow":"^1.0.0"},"devDependencies":{"copyfiles":"^2.4.1","eslint":"^7.12.1","eslint-config-prettier":"^6.15.0","eslint-plugin-import":"^2.22.1","eslint-plugin-prettier":"^3.1.4","eslint-plugin-sort-exports":"^0.3.2","prettier":"2.1.2","webpack":"^5.25.0","webpack-cli":"^4.5.0"}}');
+module.exports = JSON.parse('{"name":"dcf-chrome-extension","version":"1.0.0","description":"Calculate the fair valuation of an investment using discounted cash flow method","homepage_url":"https://github.com/bertolo1988/dcf-chrome-extension","author":"bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)","permissions":["activeTab","declarativeContent","storage"],"background":{"scripts":["background.js"],"persistent":false},"browser_action":{"default_popup":"popup.html","default_icon":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"}},"icons":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"},"manifest_version":2}');
 
 /***/ })
 
@@ -17444,7 +17444,7 @@ var __webpack_exports__ = {};
   !*** ./src/popup.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../package.json */ "./package.json");
+/* harmony import */ var _manifest_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./manifest.json */ "./src/manifest.json");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var discounted_cash_flow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! discounted-cash-flow */ "./node_modules/discounted-cash-flow/src/DiscountedCashFlow.js");
@@ -17520,7 +17520,7 @@ function renderFairMarketCap(fairMarketCap) {
   document.getElementById('fairMarketCap').value = fairMarketCap;
 }
 
-renderVersion(_package_json__WEBPACK_IMPORTED_MODULE_0__.version);
+renderVersion(_manifest_json__WEBPACK_IMPORTED_MODULE_0__.version);
 
 calculateButtonElement.onclick = function () {
   const {

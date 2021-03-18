@@ -1,7 +1,9 @@
 {
-  "name": "Getting Started Example",
-  "version": "1.0",
-  "description": "Build an Extension!",
+  "name": "dcf-chrome-extension",
+  "version": "1.0.0",
+  "description": "Calculate the fair valuation of an investment using discounted cash flow method.",
+  "homepage_url": "https://github.com/bertolo1988/dcf-chrome-extension",
+  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],

@@ -1,4 +1,4 @@
-import * as packageInfo from '../package.json';
+import * as manifestInfo from './manifest.json';
 import _ from 'lodash';
 import DiscountedCashFlow from 'discounted-cash-flow';
 
@@ -69,7 +69,7 @@ function renderFairMarketCap(fairMarketCap) {
   document.getElementById('fairMarketCap').value = fairMarketCap;
 }
 
-renderVersion(packageInfo.version);
+renderVersion(manifestInfo.version);
 
 calculateButtonElement.onclick = function () {
   const {
