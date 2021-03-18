@@ -106,3 +106,5 @@ dist
 mongo_data/
 README.md
 .travis.yml
+
+*.html
