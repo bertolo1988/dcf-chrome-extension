@@ -1,3 +1,4 @@
+import * as packageInfo from '../package.json';
 import _ from 'lodash';
 import DiscountedCashFlow from 'discounted-cash-flow';
 
@@ -52,6 +53,10 @@ function getDataFromHtml() {
   };
 }
 
+function renderVersion(version) {
+  document.getElementById('appVersion').value = version;
+}
+
 function renderFairEnterpriseValue(fairEnterpriseValue) {
   document.getElementById('fairEnterpriseValue').value = fairEnterpriseValue;
 }
@@ -63,6 +68,8 @@ function renderFairStockPrice(fairStockPrice) {
 function renderFairMarketCap(fairMarketCap) {
   document.getElementById('fairMarketCap').value = fairMarketCap;
 }
+
+renderVersion(packageInfo.version);
 
 calculateButtonElement.onclick = function () {
   const {

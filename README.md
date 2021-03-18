@@ -13,19 +13,19 @@ The purpose of DCF analysis is to estimate the money an investor would receive f
 
 ### References
 
-[Discounted Cash Flow (DCF)](https://www.investopedia.com/terms/d/dcf.asp)
+[Discounted Cash Flow (DCF) - Investopedia](https://www.investopedia.com/terms/d/dcf.asp)
 
-[How To Calculate Intrinsic Value, Investing with Tom](https://www.youtube.com/watch?v=cI8ZSf0nkFs).
+[How To Calculate Intrinsic Value - Investing with Tom](https://www.youtube.com/watch?v=cI8ZSf0nkFs)
 
 ## Install
 
-* Download the code by pressing the green button on top of this page and unzip it in your drive.
+* Download the code by pressing the green button on top of this page and unzip it in your drive
 
-* Go to [chrome://extensions/](chrome://extensions/).
+* Go to [chrome://extensions/](chrome://extensions/)
 
 * Enable developer mode
 
-* Load unpacked > select the dist/ folder.
+* Load unpacked > select the dist/ folder
 
 
 ## Contributions

@@ -2,6 +2,11 @@ body {
   background: lightgrey;
 }
 
+.align-text-center {
+  text-align: center;
+  display: block;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
