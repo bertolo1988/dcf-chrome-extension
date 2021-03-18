@@ -1,0 +1,28 @@
+body {
+  background: lightgrey;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.container {
+  margin: 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.header-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-icon button {
+  font-size: 20px;
+}
+
+.calculate-button {
+  background: lightyellow;
+}
