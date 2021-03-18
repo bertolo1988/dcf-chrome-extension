@@ -9,7 +9,7 @@ openNewWindowElement.onclick = function () {
     url: 'popup.html',
     type: 'panel',
     width: 200,
-    height: 600
+    height: 570
   });
 };
 
