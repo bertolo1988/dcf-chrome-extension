@@ -17340,7 +17340,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"dcf-chrome-extension","version":"1.0.0","description":"Calculate the fair valuation of an investment using discounted cash flow method","homepage_url":"https://github.com/bertolo1988/dcf-chrome-extension","author":"bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)","permissions":["activeTab","declarativeContent","storage"],"background":{"scripts":["background.js"],"persistent":false},"browser_action":{"default_popup":"popup.html","default_icon":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"}},"icons":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"},"manifest_version":2}');
+module.exports = JSON.parse('{"name":"dcf-chrome-extension","version":"1.0.0","description":"Calculate the fair valuation of an investment using discounted cash flow method.","homepage_url":"https://github.com/bertolo1988/dcf-chrome-extension","author":"bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)","permissions":["activeTab","declarativeContent","storage"],"background":{"scripts":["background.js"],"persistent":false},"browser_action":{"default_popup":"popup.html","default_icon":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"}},"icons":{"16":"images/benjamin_16.png","32":"images/benjamin_32.png","48":"images/benjamin_48.png","128":"images/benjamin_128.png"},"manifest_version":2}');
 
 /***/ })
 

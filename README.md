@@ -19,7 +19,7 @@ The purpose of DCF analysis is to estimate the money an investor would receive f
 
 ## Install
 
-* Download the code by pressing the green button on top of this page and unzip it in your drive
+* [Download the latest release here](https://github.com/bertolo1988/dcf-chrome-extension/releases) and unzip it in your drive
 
 * Go to [chrome://extensions/](chrome://extensions/)
 
