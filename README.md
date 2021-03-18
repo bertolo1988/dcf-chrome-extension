@@ -1,3 +1,5 @@
+![alt text](src/images/benjamin_264.png)
+
 # dcf-chrome-extension
 
 Chrome extension that helps to calculate the fair valuation of an investment using discounted cash flow method.
