@@ -7,7 +7,7 @@ import ControlledTabs from "./ControlledTabs";
 
 import DcfHistoryContext from "./context/DcfHistoryContext";
 
-const DCF_HISTORY_LIMIT = 50;
+const DCF_HISTORY_LIMIT = 20;
 
 class App extends React.Component {
   constructor(props) {
@@ -17,11 +17,19 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    chrome.storage.local.get(["dcfHistory"], (data) => {
+      const { dcfHistory } = data;
+      if (dcfHistory && dcfHistory.length > 0) this.setState({ dcfHistory });
+    });
+  }
+
   removeDcf(key) {
-    const newDcfHistory = this.state.dcfHistory.filter(
+    const dcfHistory = this.state.dcfHistory.filter(
       (entry) => entry.key !== key
     );
-    this.setState({ dcfHistory: newDcfHistory });
+    this.setState({ dcfHistory });
+    chrome.storage.local.set({ dcfHistory });
   }
 
   addDcf(newEntry) {
@@ -31,6 +39,7 @@ class App extends React.Component {
       dcfHistory.shift();
     }
     this.setState({ dcfHistory });
+    chrome.storage.local.set({ dcfHistory });
   }
 
   render() {
