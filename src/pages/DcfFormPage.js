@@ -62,7 +62,7 @@ export default class DcfFormPage extends React.Component {
     );
     const upside = _.round(
       ((fairStockPrice - sharePrice) * 100) / sharePrice,
-      DECIMALS
+      1
     );
     const dcfResults = {
       totalPresentValue,
