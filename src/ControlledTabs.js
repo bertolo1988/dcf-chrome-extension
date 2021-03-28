@@ -5,6 +5,7 @@ import DcfFormPage from "./pages/DcfFormPage";
 import AboutPage from "./pages/AboutPage";
 import NewWindowPage from "./pages/NewWindowPage";
 import DcfHistoryPage from "./pages/DcfHistoryPage";
+import BooksPage from "./pages/BooksPage";
 
 function ControlledTabs() {
   const [key, setKey] = useState("form");
@@ -27,6 +28,9 @@ function ControlledTabs() {
       </Tab>
       <Tab eventKey="about" title="About">
         <AboutPage />
+      </Tab>
+      <Tab eventKey="books" title="Books">
+        <BooksPage />
       </Tab>
     </Tabs>
   );

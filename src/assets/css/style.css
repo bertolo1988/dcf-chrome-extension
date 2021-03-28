@@ -69,3 +69,10 @@ hr {
 tbody {
   text-align: center;
 }
+
+.bookImage {
+  max-height: 10rem;
+  padding: 0.3rem;
+  margin: auto;
+  display: flex;
+}
