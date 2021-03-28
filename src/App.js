@@ -5,8 +5,46 @@ import ReactDOM from "react-dom";
 import React from "react";
 import ControlledTabs from "./ControlledTabs";
 
-function App() {
-  return <ControlledTabs />;
+import DcfHistoryContext from "./context/DcfHistoryContext";
+
+const DCF_HISTORY_LIMIT = 5;
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dcfHistory: [],
+    };
+  }
+
+  addDcf(newEntry) {
+    let { dcfHistory } = this.state;
+    dcfHistory.push(newEntry);
+    if (dcfHistory && dcfHistory > DCF_HISTORY_LIMIT) {
+      dcfHistory.shift();
+    }
+    this.setState({ dcfHistory });
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    console.log(error, 111, errorInfo);
+  }
+
+  render() {
+    return (
+      <DcfHistoryContext.Provider
+        value={{
+          dcfHistory: this.state.dcfHistory,
+          addDcf: (newEntry) => {
+            this.addDcf(newEntry);
+          },
+        }}
+      >
+        <ControlledTabs />
+      </DcfHistoryContext.Provider>
+    );
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById("app"));
