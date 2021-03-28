@@ -8,10 +8,6 @@ export default class DcfHistoryPage extends React.Component {
   static contextType = DcfHistoryContext;
 
   render() {
-    return (
-      <Container>
-        <DcfHistory history={this.context.dcfHistory} />
-      </Container>
-    );
+    return <DcfHistory history={this.context.dcfHistory} />;
   }
 }

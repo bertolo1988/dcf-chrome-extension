@@ -17,6 +17,13 @@ class App extends React.Component {
     };
   }
 
+  removeDcf(key) {
+    const newDcfHistory = this.state.dcfHistory.filter(
+      (entry) => entry.key !== key
+    );
+    this.setState({ dcfHistory: newDcfHistory });
+  }
+
   addDcf(newEntry) {
     let { dcfHistory } = this.state;
     dcfHistory.push(newEntry);
@@ -33,6 +40,9 @@ class App extends React.Component {
           dcfHistory: this.state.dcfHistory,
           addDcf: (newEntry) => {
             this.addDcf(newEntry);
+          },
+          removeDcf: (key) => {
+            this.removeDcf(key);
           },
         }}
       >

@@ -10,8 +10,8 @@ export default function NewWindow() {
           chrome.windows.create({
             url: "index.html",
             type: "panel",
-            width: 400,
-            height: 800,
+            width: 650,
+            height: 900,
           });
         }}
       >

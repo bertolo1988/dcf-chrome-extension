@@ -5,7 +5,13 @@ function ReadOnlyLabelValue(props) {
   return (
     <Fragment>
       <Form.Label>{props.label}</Form.Label>
-      <Form.Control size="sm" type="text" value={props.value} readOnly />
+      <Form.Control
+        className={`bold ${props.color}`}
+        size="sm"
+        type="text"
+        value={props.value}
+        readOnly
+      />
     </Fragment>
   );
 }
@@ -29,6 +35,13 @@ export default function DcfResults(props) {
         <ReadOnlyLabelValue
           label="Fair stock price ($)"
           value={props.fairStockPrice}
+        />
+      </Row>
+      <Row className="small-vertical-margin">
+        <ReadOnlyLabelValue
+          color={props.upside > 0 ? "green" : "red"}
+          label="Upside"
+          value={`${props.upside}%`}
         />
       </Row>
     </Container>
