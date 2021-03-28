@@ -8,7 +8,7 @@ import { uuidv4 } from "../Utils";
 
 import DcfHistoryContext from "../context/DcfHistoryContext";
 
-const DECIMALS = 2;
+const DECIMALS = 1;
 
 export default class DcfFormPage extends React.Component {
   constructor(props) {
@@ -62,7 +62,7 @@ export default class DcfFormPage extends React.Component {
     );
     const upside = _.round(
       ((fairStockPrice - sharePrice) * 100) / sharePrice,
-      1
+      DECIMALS
     );
     const dcfResults = {
       totalPresentValue,
