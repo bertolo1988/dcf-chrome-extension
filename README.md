@@ -8,9 +8,7 @@ Chrome extension that helps to calculate the fair valuation of an investment usi
 
 It is a valuation method used to estimate the value of an investment based on its expected future cash flows. DCF analysis attempts to figure out the value of an investment today, based on projections of how much money it will generate in the future.
 
-
 The purpose of DCF analysis is to estimate the money an investor would receive from an investment, adjusted for the time value of money. The time value of money assumes that a dollar today is worth more than a dollar tomorrow because it can be invested. As such, a DCF analysis is appropriate in any situation where a person is paying money in the present with expectations of receiving more money in the future.
-
 
 ### References
 
@@ -18,20 +16,26 @@ The purpose of DCF analysis is to estimate the money an investor would receive f
 
 [How To Calculate Intrinsic Value - Investing with Tom](https://www.youtube.com/watch?v=cI8ZSf0nkFs)
 
+## Requirements
+
+- Chrome
+
+- node.js v14.16.0
+
 ## Install
 
-* [Download the latest release here](https://github.com/bertolo1988/dcf-chrome-extension/releases) and unzip it in your drive
+- npm install
 
-* Go to [chrome://extensions/](chrome://extensions/)
+- npm run build
 
-* Enable developer mode
+- Go to [chrome://extensions/](chrome://extensions/)
 
-* Load unpacked > select the dist/ folder
+- Enable developer mode
 
+- Load unpacked > select the dist/ folder
 
 ## Contributions
 
 Contributions will be highly appreciated.
 
 Feel free to open any issues on any related matter.
-
