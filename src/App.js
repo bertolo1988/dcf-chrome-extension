@@ -20,15 +20,10 @@ class App extends React.Component {
   addDcf(newEntry) {
     let { dcfHistory } = this.state;
     dcfHistory.push(newEntry);
-    if (dcfHistory && dcfHistory > DCF_HISTORY_LIMIT) {
+    if (dcfHistory && dcfHistory.length > DCF_HISTORY_LIMIT) {
       dcfHistory.shift();
     }
     this.setState({ dcfHistory });
-  }
-
-  componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
-    console.log(error, 111, errorInfo);
   }
 
   render() {
