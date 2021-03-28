@@ -8,6 +8,8 @@ import { uuidv4 } from "../Utils";
 
 import DcfHistoryContext from "../context/DcfHistoryContext";
 
+const DECIMALS = 2;
+
 export default class DcfFormPage extends React.Component {
   constructor(props) {
     super(props);
@@ -49,12 +51,18 @@ export default class DcfFormPage extends React.Component {
       terminalMultiple,
       discountRate
     );
-    const totalPresentValue = result.totalPresentValue;
-    const fairMarketCap = result.totalPresentValue - debt + cash;
-    const fairStockPrice = _.round((fairMarketCap * sharePrice) / marketCap, 2);
+    const totalPresentValue = _.round(result.totalPresentValue, DECIMALS);
+    const fairMarketCap = _.round(
+      result.totalPresentValue - debt + cash,
+      DECIMALS
+    );
+    const fairStockPrice = _.round(
+      (fairMarketCap * sharePrice) / marketCap,
+      DECIMALS
+    );
     const upside = _.round(
       ((fairStockPrice - sharePrice) * 100) / sharePrice,
-      2
+      DECIMALS
     );
     const dcfResults = {
       totalPresentValue,
