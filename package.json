@@ -4,9 +4,10 @@
   "description": "Chrome extension that helps to calculate the fair valuation of an investment using discounted cash flow method",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf node_modules/ dist/",
-    "build": "webpack --mode production",
-    "watch": "webpack --watch",
+    "clean": "npx rimraf node_modules/ dist/",
+    "build:package": "./build-package.sh",
+    "build": "npx webpack --mode production",
+    "watch": "npx webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
