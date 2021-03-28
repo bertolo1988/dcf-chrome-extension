@@ -2,3 +2,5 @@
 .idea/*
 node_modules/*
 dist/*
+dcf-chrome-extension/*
+dcf-chrome-extension.zip
