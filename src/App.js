@@ -7,7 +7,7 @@ import ControlledTabs from "./ControlledTabs";
 
 import DcfHistoryContext from "./context/DcfHistoryContext";
 
-const DCF_HISTORY_LIMIT = 5;
+const DCF_HISTORY_LIMIT = 50;
 
 class App extends React.Component {
   constructor(props) {
