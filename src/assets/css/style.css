@@ -1,0 +1,55 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  height: 100%;
+  min-width: 20rem;
+  min-height: 60rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  width: 100%;
+}
+
+.small-vertical-margin {
+  margin: 0.6rem 0rem;
+}
+
+.container-vertical-margin {
+  margin: 5rem 0rem;
+}
+
+.centered {
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-link {
+  font-size: 2rem;
+}
+
+.card-link svg {
+  width: 100%;
+}
+
+.dcf-form-row {
+  font-size: 0.875rem;
+}
+
+label {
+  margin-bottom: 0.2rem;
+}
+
+hr {
+  margin: 0.5rem 0;
+}

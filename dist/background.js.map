@@ -1,1 +1,0 @@
-{"version":3,"file":"background.js","sources":["webpack://dcf-chrome-extension/./src/background.js"],"sourcesContent":["console.log('nop');\n"],"mappings":";;;;;AAAA;;;A","sourceRoot":""}
