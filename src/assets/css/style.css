@@ -53,3 +53,7 @@ label {
 hr {
   margin: 0.5rem 0;
 }
+
+tbody {
+  text-align: center;
+}
