@@ -36,14 +36,14 @@ function DcfForm(props) {
         onSubmit={(event) => {
           props.calculate({
             ticker,
-            sharePrice,
-            marketCap,
-            cash,
-            debt,
-            freeCashFlow,
-            growthRate,
-            discountRate,
-            terminalMultiple,
+            sharePrice: parseFloat(sharePrice),
+            marketCap: parseFloat(marketCap),
+            cash: parseFloat(cash),
+            debt: parseFloat(debt),
+            freeCashFlow: parseFloat(freeCashFlow),
+            growthRate: parseFloat(growthRate),
+            discountRate: parseFloat(discountRate),
+            terminalMultiple: parseFloat(terminalMultiple),
           });
           event.preventDefault();
         }}
