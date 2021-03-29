@@ -1,6 +1,6 @@
 {
   "name": "dcf-chrome-extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chrome extension that helps to calculate the fair valuation of an investment using discounted cash flow method",
   "main": "index.js",
   "scripts": {
