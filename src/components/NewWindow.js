@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 
+import Constants from "../Constants";
+
 export default function NewWindow() {
   return (
     <div>
@@ -10,8 +12,8 @@ export default function NewWindow() {
           chrome.windows.create({
             url: "index.html",
             type: "panel",
-            width: 650,
-            height: 900,
+            width: Constants.NEW_PANEL_WIDTH,
+            height: Constants.NEW_PANEL_HEIGHT,
           });
         }}
       >

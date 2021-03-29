@@ -70,9 +70,13 @@ tbody {
   text-align: center;
 }
 
+.bookImageContainer {
+  padding: 0.5rem;
+}
+
 .bookImage {
   max-height: 10rem;
   padding: 0.3rem;
-  margin: auto;
+  margin: 0.5rem auto;
   display: flex;
 }

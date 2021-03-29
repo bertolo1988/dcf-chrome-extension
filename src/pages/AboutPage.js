@@ -1,12 +1,12 @@
 import React from "react";
-import { Github, Cash, Twitter } from "react-bootstrap-icons";
+import { Cash, Twitter } from "react-bootstrap-icons";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import * as manifestInfo from "../manifest.json";
 
 export default class AboutPage extends React.Component {
   renderVersionCard() {
     return (
-      <Card>
+      <Card className="small-vertical-margin">
         <Card.Body>
           <Card.Title>{manifestInfo.name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
@@ -18,15 +18,6 @@ export default class AboutPage extends React.Component {
           </Card.Text>
           <Container>
             <Row>
-              <Col>
-                <Card.Link
-                  className="text-center"
-                  target="_blank"
-                  href="https://github.com/bertolo1988/dcf-chrome-extension"
-                >
-                  <Github />
-                </Card.Link>
-              </Col>
               <Col>
                 <Card.Link
                   className="text-center"
@@ -54,8 +45,10 @@ export default class AboutPage extends React.Component {
 
   render() {
     return (
-      <Container className="small-vertical-margin">
-        <Row>{this.renderVersionCard()}</Row>
+      <Container>
+        <Row>
+          <Col>{this.renderVersionCard()}</Col>
+        </Row>
       </Container>
     );
   }
